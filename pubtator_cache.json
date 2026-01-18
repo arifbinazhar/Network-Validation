@@ -1,0 +1,1312 @@
+{
+    "entity:CYP2C19:None:5": [
+        {
+            "_id": "@GENE_CYP2C19",
+            "biotype": "gene",
+            "db_id": "1557",
+            "db": "ncbi_gene",
+            "name": "CYP2C19",
+            "description": "All Species",
+            "match": "Matched on name <m>CYP2C19</m>"
+        },
+        {
+            "_id": "@VARIANT_c.681G>A_CYP2C19_human",
+            "biotype": "variant",
+            "db_id": "rs4244285##",
+            "db": "litvar",
+            "name": "c.*2G>A",
+            "description": "CYP2C19 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_c.636G>A_CYP2C19_human",
+            "biotype": "variant",
+            "db_id": "rs4986893##",
+            "db": "litvar",
+            "name": "p.W212X",
+            "description": "CYP2C19 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_c._806C>T_CYP2C19_human",
+            "biotype": "variant",
+            "db_id": "rs12248560##",
+            "db": "litvar",
+            "name": "p.C806T",
+            "description": "CYP2C19 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@DISEASE_Drug_Metabolism_Poor_CYP2C19_Related",
+            "biotype": "disease",
+            "db_id": "C563703",
+            "db": "ncbi_mesh",
+            "name": "Drug Metabolism Poor CYP2C19-Related",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:Inflammation:None:5": [
+        {
+            "_id": "@DISEASE_Inflammation",
+            "biotype": "disease",
+            "db_id": "D007249",
+            "db": "ncbi_mesh",
+            "name": "Inflammation",
+            "match": "Matched on name <m>Inflammation</m>"
+        },
+        {
+            "_id": "@DISEASE_Pneumonia",
+            "biotype": "disease",
+            "db_id": "D011014",
+            "db": "ncbi_mesh",
+            "name": "Pneumonia",
+            "match": "Matched on synonyms <m>Inflammation, Lung</m>"
+        },
+        {
+            "_id": "@DISEASE_Encephalitis",
+            "biotype": "disease",
+            "db_id": "D004660",
+            "db": "ncbi_mesh",
+            "name": "Encephalitis",
+            "match": "Matched on synonyms <m>Inflammation, Brain</m>"
+        },
+        {
+            "_id": "@DISEASE_Otitis_Media",
+            "biotype": "disease",
+            "db_id": "D010033",
+            "db": "ncbi_mesh",
+            "name": "Otitis Media",
+            "match": "Matched on synonyms <m>Inflammation, Middle Ear</m>"
+        },
+        {
+            "_id": "@DISEASE_Radiculopathy",
+            "biotype": "disease",
+            "db_id": "D011843",
+            "db": "ncbi_mesh",
+            "name": "Radiculopathy",
+            "match": "Matched on synonyms <m>Inflammation, Nerve Root</m>"
+        }
+    ],
+    "entity:Diabetes:None:5": [
+        {
+            "_id": "@DISEASE_Diabetes_Mellitus",
+            "biotype": "disease",
+            "db_id": "D003920",
+            "db": "ncbi_mesh",
+            "name": "Diabetes Mellitus",
+            "match": "Matched on name <m>Diabetes Mellitus</m>"
+        },
+        {
+            "_id": "@DISEASE_Diabetes_Mellitus_Type_2",
+            "biotype": "disease",
+            "db_id": "D003924",
+            "db": "ncbi_mesh",
+            "name": "Diabetes Mellitus Type 2",
+            "match": "Matched on name <m>Diabetes Mellitus Type 2</m>"
+        },
+        {
+            "_id": "@DISEASE_Diabetes_Mellitus_Type_1",
+            "biotype": "disease",
+            "db_id": "D003922",
+            "db": "ncbi_mesh",
+            "name": "Diabetes Mellitus Type 1",
+            "match": "Matched on name <m>Diabetes Mellitus Type 1</m>"
+        },
+        {
+            "_id": "@DISEASE_Diabetes_Gestational",
+            "biotype": "disease",
+            "db_id": "D016640",
+            "db": "ncbi_mesh",
+            "name": "Diabetes Gestational",
+            "match": "Matched on name <m>Diabetes Gestational</m>"
+        },
+        {
+            "_id": "@DISEASE_Diabetes_Complications",
+            "biotype": "disease",
+            "db_id": "D048909",
+            "db": "ncbi_mesh",
+            "name": "Diabetes Complications",
+            "match": "Matched on name <m>Diabetes Complications</m>"
+        }
+    ],
+    "entity:Hepatitis:None:5": [
+        {
+            "_id": "@DISEASE_Hepatitis_B",
+            "biotype": "disease",
+            "db_id": "D006509",
+            "db": "ncbi_mesh",
+            "name": "Hepatitis B",
+            "match": "Matched on name <m>Hepatitis B</m>"
+        },
+        {
+            "_id": "@DISEASE_Hepatitis_C_Chronic",
+            "biotype": "disease",
+            "db_id": "D019698",
+            "db": "ncbi_mesh",
+            "name": "Hepatitis C Chronic",
+            "match": "Matched on name <m>Hepatitis C Chronic</m>"
+        },
+        {
+            "_id": "@DISEASE_Hepatitis_C",
+            "biotype": "disease",
+            "db_id": "D006526",
+            "db": "ncbi_mesh",
+            "name": "Hepatitis C",
+            "match": "Matched on name <m>Hepatitis C</m>"
+        },
+        {
+            "_id": "@DISEASE_Hepatitis_E",
+            "biotype": "disease",
+            "db_id": "D016751",
+            "db": "ncbi_mesh",
+            "name": "Hepatitis E",
+            "match": "Matched on name <m>Hepatitis E</m>"
+        },
+        {
+            "_id": "@DISEASE_Hepatitis_B_Chronic",
+            "biotype": "disease",
+            "db_id": "D019694",
+            "db": "ncbi_mesh",
+            "name": "Hepatitis B Chronic",
+            "match": "Matched on name <m>Hepatitis B Chronic</m>"
+        }
+    ],
+    "entity:Asthma:None:5": [
+        {
+            "_id": "@DISEASE_Asthma",
+            "biotype": "disease",
+            "db_id": "D001249",
+            "db": "ncbi_mesh",
+            "name": "Asthma",
+            "match": "Matched on name <m>Asthma</m>"
+        },
+        {
+            "_id": "@DISEASE_Status_Asthmaticus",
+            "biotype": "disease",
+            "db_id": "D013224",
+            "db": "ncbi_mesh",
+            "name": "Status Asthmaticus",
+            "match": "Matched on synonyms <m>Asthmatic Shock</m>"
+        },
+        {
+            "_id": "@DISEASE_Asthma_Chronic_Obstructive_Pulmonary_Disease_Overlap_Syndrome",
+            "biotype": "disease",
+            "db_id": "D000080445",
+            "db": "ncbi_mesh",
+            "name": "Asthma-Chronic Obstructive Pulmonary Disease Overlap Syndrome",
+            "match": "Matched on name <m>Asthma-Chronic Obstructive Pulmonary Disease Overlap Syndrome</m>"
+        },
+        {
+            "_id": "@DISEASE_Ige_Responsiveness_Atopic",
+            "biotype": "disease",
+            "db_id": "C564133",
+            "db": "ncbi_mesh",
+            "name": "Ige Responsiveness Atopic",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@DISEASE_Asthma_Aspirin_Induced",
+            "biotype": "disease",
+            "db_id": "D055963",
+            "db": "ncbi_mesh",
+            "name": "Asthma Aspirin-Induced",
+            "match": "Matched on name <m>Asthma Aspirin-Induced</m>"
+        }
+    ],
+    "entity:DHFR:None:5": [
+        {
+            "_id": "@GENE_DHFR",
+            "biotype": "gene",
+            "db_id": "1719",
+            "db": "ncbi_gene",
+            "name": "DHFR",
+            "description": "All Species",
+            "match": "Matched on name <m>DHFR</m>"
+        },
+        {
+            "_id": "@GENE_PSG1",
+            "biotype": "gene",
+            "db_id": "5669",
+            "db": "ncbi_gene",
+            "name": "PSG1",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>DHFRP2</m>"
+        },
+        {
+            "_id": "@GENE_DHFR2",
+            "biotype": "gene",
+            "db_id": "200895",
+            "db": "ncbi_gene",
+            "name": "DHFR2",
+            "description": "All Species",
+            "match": "Matched on name <m>DHFR2</m>"
+        },
+        {
+            "_id": "@VARIANT_p.N51I_DHFR_human",
+            "biotype": "variant",
+            "db_id": "#1719#p.N51I",
+            "db": "litvar",
+            "name": "p.N51I",
+            "description": "DHFR (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@GENE_DHFR.L",
+            "biotype": "gene",
+            "db_id": "495375",
+            "db": "ncbi_gene",
+            "name": "dhfr.L",
+            "description": "All Species",
+            "match": "Matched on name <m>dhfr.L</m>"
+        }
+    ],
+    "entity:ESR1:None:5": [
+        {
+            "_id": "@GENE_ESR1",
+            "biotype": "gene",
+            "db_id": "2099",
+            "db": "ncbi_gene",
+            "name": "ESR1",
+            "description": "All Species",
+            "match": "Matched on name <m>ESR1</m>"
+        },
+        {
+            "_id": "@GENE_MEC1",
+            "biotype": "gene",
+            "db_id": "852433",
+            "db": "ncbi_gene",
+            "name": "MEC1",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>ESR1</m>"
+        },
+        {
+            "_id": "@VARIANT_c.454_397T>C_ESR1_human",
+            "biotype": "variant",
+            "db_id": "rs2234693##",
+            "db": "litvar",
+            "name": "c.397C>T",
+            "description": "ESR1 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_c.454_351A>G_ESR1_human",
+            "biotype": "variant",
+            "db_id": "rs9340799##",
+            "db": "litvar",
+            "name": "p.L351V",
+            "description": "ESR1 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@GENE_ESR1.L",
+            "biotype": "gene",
+            "db_id": "398734",
+            "db": "ncbi_gene",
+            "name": "esr1.L",
+            "description": "All Species",
+            "match": "Matched on name <m>esr1.L</m>"
+        }
+    ],
+    "entity:Diarrhea:None:5": [
+        {
+            "_id": "@DISEASE_Diarrhea",
+            "biotype": "disease",
+            "db_id": "D003967",
+            "db": "ncbi_mesh",
+            "name": "Diarrhea",
+            "match": "Matched on name <m>Diarrhea</m>"
+        },
+        {
+            "_id": "@DISEASE_Diarrhea_5_With_Tufting_Enteropathy_Congenital",
+            "biotype": "disease",
+            "db_id": "C567703",
+            "db": "ncbi_mesh",
+            "name": "Diarrhea 5 With Tufting Enteropathy Congenital",
+            "match": "Matched on name <m>Diarrhea 5 With Tufting Enteropathy Congenital</m>"
+        },
+        {
+            "_id": "@DISEASE_Diarrhea_3_Secretory_Sodium_Congenital",
+            "biotype": "disease",
+            "db_id": "C562576",
+            "db": "ncbi_mesh",
+            "name": "Diarrhea 3 Secretory Sodium Congenital",
+            "match": "Matched on name <m>Diarrhea 3 Secretory Sodium Congenital</m>"
+        },
+        {
+            "_id": "@DISEASE_Dysentery",
+            "biotype": "disease",
+            "db_id": "D004403",
+            "db": "ncbi_mesh",
+            "name": "Dysentery",
+            "match": "Matched on synonyms <m>Diarrheal Disease, Infectious</m>"
+        },
+        {
+            "_id": "@DISEASE_Diarrhea_Chronic_with_Villous_Atrophy",
+            "biotype": "disease",
+            "db_id": "C564019",
+            "db": "ncbi_mesh",
+            "name": "Diarrhea Chronic with Villous Atrophy",
+            "match": "Matched on name <m>Diarrhea Chronic with Villous Atrophy</m>"
+        }
+    ],
+    "entity:Infertility:None:5": [
+        {
+            "_id": "@DISEASE_Infertility",
+            "biotype": "disease",
+            "db_id": "D007246",
+            "db": "ncbi_mesh",
+            "name": "Infertility",
+            "match": "Matched on name <m>Infertility</m>"
+        },
+        {
+            "_id": "@DISEASE_Infertility_Male",
+            "biotype": "disease",
+            "db_id": "D007248",
+            "db": "ncbi_mesh",
+            "name": "Infertility Male",
+            "match": "Matched on name <m>Infertility Male</m>"
+        },
+        {
+            "_id": "@DISEASE_Infertility_Female",
+            "biotype": "disease",
+            "db_id": "D007247",
+            "db": "ncbi_mesh",
+            "name": "Infertility Female",
+            "match": "Matched on name <m>Infertility Female</m>"
+        },
+        {
+            "_id": "@DISEASE_Porcine_Reproductive_and_Respiratory_Syndrome",
+            "biotype": "disease",
+            "db_id": "D019318",
+            "db": "ncbi_mesh",
+            "name": "Porcine Reproductive and Respiratory Syndrome",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@DISEASE_Male_Infertility_with_Large_Headed_Multiflagellar_Polyploid_Spermatozoa",
+            "biotype": "disease",
+            "db_id": "C562903",
+            "db": "ncbi_mesh",
+            "name": "Male Infertility with Large-Headed Multiflagellar Polyploid Spermatozoa",
+            "match": "Matched on synonyms <m>Infertility Associated with Multi-Tailed Spermatozoa and Excessive DNA</m>"
+        }
+    ],
+    "entity:Pain:None:5": [
+        {
+            "_id": "@DISEASE_Pain",
+            "biotype": "disease",
+            "db_id": "D010146",
+            "db": "ncbi_mesh",
+            "name": "Pain",
+            "match": "Matched on name <m>Pain</m>"
+        },
+        {
+            "_id": "@DISEASE_Pain_Postoperative",
+            "biotype": "disease",
+            "db_id": "D010149",
+            "db": "ncbi_mesh",
+            "name": "Pain Postoperative",
+            "match": "Matched on name <m>Pain Postoperative</m>"
+        },
+        {
+            "_id": "@DISEASE_Headache",
+            "biotype": "disease",
+            "db_id": "D006261",
+            "db": "ncbi_mesh",
+            "name": "Headache",
+            "match": "Matched on synonyms <m>Pains, Head</m>"
+        },
+        {
+            "_id": "@DISEASE_Pain_Insensitivity_Congenital",
+            "biotype": "disease",
+            "db_id": "D000699",
+            "db": "ncbi_mesh",
+            "name": "Pain Insensitivity Congenital",
+            "match": "Matched on name <m>Pain Insensitivity Congenital</m>"
+        },
+        {
+            "_id": "@DISEASE_Abdominal_Pain",
+            "biotype": "disease",
+            "db_id": "D015746",
+            "db": "ncbi_mesh",
+            "name": "Abdominal Pain",
+            "match": "Matched on synonyms <m>Pain, Colicky</m>"
+        }
+    ],
+    "entity:Vitiligo:None:5": [
+        {
+            "_id": "@DISEASE_Vitiligo",
+            "biotype": "disease",
+            "db_id": "D014820",
+            "db": "ncbi_mesh",
+            "name": "Vitiligo",
+            "match": "Matched on name <m>Vitiligo</m>"
+        },
+        {
+            "_id": "@DISEASE_Diffuse_alopecia",
+            "biotype": "disease",
+            "db_id": "C531609",
+            "db": "ncbi_mesh",
+            "name": "Diffuse alopecia",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@DISEASE_Spastic_paraplegia_23",
+            "biotype": "disease",
+            "db_id": "C536859",
+            "db": "ncbi_mesh",
+            "name": "Spastic paraplegia 23",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@DISEASE_Alopecia_universalis_onychodystrophy_vitiligo",
+            "biotype": "disease",
+            "db_id": "C537056",
+            "db": "ncbi_mesh",
+            "name": "Alopecia universalis onychodystrophy vitiligo",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:GPR151:None:5": [
+        {
+            "_id": "@GENE_GPR151",
+            "biotype": "gene",
+            "db_id": "240239",
+            "db": "ncbi_gene",
+            "name": "Gpr151",
+            "description": "All Species",
+            "match": "Matched on name <m>Gpr151</m>"
+        },
+        {
+            "_id": "@VARIANT_p.R95X_GPR151_human",
+            "biotype": "variant",
+            "db_id": "rs114285050##",
+            "db": "litvar",
+            "name": "p.R95X",
+            "description": "GPR151 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_c.2A>A_GPR151_human",
+            "biotype": "variant",
+            "db_id": "#134391#c.2A>A",
+            "db": "litvar",
+            "name": "c.2A>A",
+            "description": "GPR151 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_c.2G>A_GPR151_human",
+            "biotype": "variant",
+            "db_id": "#134391#c.2G>A",
+            "db": "litvar",
+            "name": "c.2G>A",
+            "description": "GPR151 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_p.H151del_GPR151_human",
+            "biotype": "variant",
+            "db_id": "#134391#p.H151del",
+            "db": "litvar",
+            "name": "p.H151del",
+            "description": "GPR151 (human)",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:TYMS:None:5": [
+        {
+            "_id": "@GENE_TYMS",
+            "biotype": "gene",
+            "db_id": "7298",
+            "db": "ncbi_gene",
+            "name": "TYMS",
+            "description": "All Species",
+            "match": "Matched on name <m>TYMS</m>"
+        },
+        {
+            "_id": "@GENE_CXCR6",
+            "biotype": "gene",
+            "db_id": "10663",
+            "db": "ncbi_gene",
+            "name": "CXCR6",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>TYMSTR</m>"
+        },
+        {
+            "_id": "@GENE_TYMSOS",
+            "biotype": "gene",
+            "db_id": "494514",
+            "db": "ncbi_gene",
+            "name": "TYMSOS",
+            "description": "All Species",
+            "match": "Matched on name <m>TYMSOS</m>"
+        },
+        {
+            "_id": "@GENE_TYMS_1",
+            "biotype": "gene",
+            "db_id": "172149",
+            "db": "ncbi_gene",
+            "name": "tyms-1",
+            "description": "All Species",
+            "match": "Matched on name <m>tyms-1</m>"
+        },
+        {
+            "_id": "@GENE_ENOSF1",
+            "biotype": "gene",
+            "db_id": "55556",
+            "db": "ncbi_gene",
+            "name": "ENOSF1",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>TYMSAS</m>"
+        }
+    ],
+    "entity:Anemia:None:5": [
+        {
+            "_id": "@DISEASE_Anemia",
+            "biotype": "disease",
+            "db_id": "D000740",
+            "db": "ncbi_mesh",
+            "name": "Anemia",
+            "match": "Matched on name <m>Anemia</m>"
+        },
+        {
+            "_id": "@DISEASE_Anemia_Hemolytic",
+            "biotype": "disease",
+            "db_id": "D000743",
+            "db": "ncbi_mesh",
+            "name": "Anemia Hemolytic",
+            "match": "Matched on name <m>Anemia Hemolytic</m>"
+        },
+        {
+            "_id": "@DISEASE_Anemia_Sickle_Cell",
+            "biotype": "disease",
+            "db_id": "D000755",
+            "db": "ncbi_mesh",
+            "name": "Anemia Sickle Cell",
+            "match": "Matched on name <m>Anemia Sickle Cell</m>"
+        },
+        {
+            "_id": "@DISEASE_Anemia_Aplastic",
+            "biotype": "disease",
+            "db_id": "D000741",
+            "db": "ncbi_mesh",
+            "name": "Anemia Aplastic",
+            "match": "Matched on name <m>Anemia Aplastic</m>"
+        },
+        {
+            "_id": "@DISEASE_Anemia_Iron_Deficiency",
+            "biotype": "disease",
+            "db_id": "D018798",
+            "db": "ncbi_mesh",
+            "name": "Anemia Iron-Deficiency",
+            "match": "Matched on name <m>Anemia Iron-Deficiency</m>"
+        }
+    ],
+    "entity:ABCB11:None:5": [
+        {
+            "_id": "@GENE_ABCB11",
+            "biotype": "gene",
+            "db_id": "27413",
+            "db": "ncbi_gene",
+            "name": "Abcb11",
+            "description": "All Species",
+            "match": "Matched on name <m>Abcb11</m>"
+        },
+        {
+            "_id": "@GENE_ABCB11B",
+            "biotype": "gene",
+            "db_id": "100136688",
+            "db": "ncbi_gene",
+            "name": "abcb11b",
+            "description": "All Species",
+            "match": "Matched on name <m>abcb11b</m>"
+        },
+        {
+            "_id": "@VARIANT_p.V444A_ABCB11_human",
+            "biotype": "variant",
+            "db_id": "rs2287622##",
+            "db": "litvar",
+            "name": "p.V44A",
+            "description": "ABCB11 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@GENE_ABCB11A",
+            "biotype": "gene",
+            "db_id": "100699480",
+            "db": "ncbi_gene",
+            "name": "abcb11a",
+            "description": "All Species",
+            "match": "Matched on name <m>abcb11a</m>"
+        },
+        {
+            "_id": "@VARIANT_p.D482G_ABCB11_human",
+            "biotype": "variant",
+            "db_id": "rs72549402##",
+            "db": "litvar",
+            "name": "p.D482G",
+            "description": "ABCB11 (human)",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:CYP2C9:None:5": [
+        {
+            "_id": "@GENE_CYP2C9",
+            "biotype": "gene",
+            "db_id": "1559",
+            "db": "ncbi_gene",
+            "name": "CYP2C9",
+            "description": "All Species",
+            "match": "Matched on name <m>CYP2C9</m>"
+        },
+        {
+            "_id": "@VARIANT_p.I359L_CYP2C9_human",
+            "biotype": "variant",
+            "db_id": "rs1057910##",
+            "db": "litvar",
+            "name": "p.I359Y",
+            "description": "CYP2C9 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_p.R144C_CYP2C9_human",
+            "biotype": "variant",
+            "db_id": "rs1799853##",
+            "db": "litvar",
+            "name": "p.C144R",
+            "description": "CYP2C9 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_p.R150H_CYP2C9_human",
+            "biotype": "variant",
+            "db_id": "rs7900194##",
+            "db": "litvar",
+            "name": "p.R150K",
+            "description": "CYP2C9 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_p.D360E_CYP2C9_human",
+            "biotype": "variant",
+            "db_id": "rs28371686##",
+            "db": "litvar",
+            "name": "p.D360E",
+            "description": "CYP2C9 (human)",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:CYP2D6:None:5": [
+        {
+            "_id": "@GENE_CYP2D6",
+            "biotype": "gene",
+            "db_id": "1565",
+            "db": "ncbi_gene",
+            "name": "CYP2D6",
+            "description": "All Species",
+            "match": "Matched on name <m>CYP2D6</m>"
+        },
+        {
+            "_id": "@GENE_CYP2D4",
+            "biotype": "gene",
+            "db_id": "171522",
+            "db": "ncbi_gene",
+            "name": "Cyp2d4",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>Cyp2d6</m>"
+        },
+        {
+            "_id": "@GENE_LOC107987479",
+            "biotype": "gene",
+            "db_id": "107987479",
+            "db": "ncbi_gene",
+            "name": "LOC107987479",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>CYP2D6</m>"
+        },
+        {
+            "_id": "@VARIANT_c.100C>T_CYP2D6_human",
+            "biotype": "variant",
+            "db_id": "rs1065852##",
+            "db": "litvar",
+            "name": "p.P34A",
+            "description": "CYP2D6 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@DISEASE_Drug_Metabolism_Poor_CYP2D6_Related",
+            "biotype": "disease",
+            "db_id": "C563835",
+            "db": "ncbi_mesh",
+            "name": "Drug Metabolism Poor CYP2D6-Related",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:Vomiting:None:5": [
+        {
+            "_id": "@DISEASE_Vomiting",
+            "biotype": "disease",
+            "db_id": "D014839",
+            "db": "ncbi_mesh",
+            "name": "Vomiting",
+            "match": "Matched on name <m>Vomiting</m>"
+        },
+        {
+            "_id": "@DISEASE_Postoperative_Nausea_and_Vomiting",
+            "biotype": "disease",
+            "db_id": "D020250",
+            "db": "ncbi_mesh",
+            "name": "Postoperative Nausea and Vomiting",
+            "match": "Matched on synonyms <m>Vomiting, Postoperative</m>"
+        },
+        {
+            "_id": "@DISEASE_Hyperemesis_Gravidarum",
+            "biotype": "disease",
+            "db_id": "D006939",
+            "db": "ncbi_mesh",
+            "name": "Hyperemesis Gravidarum",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@DISEASE_Vomiting_Anticipatory",
+            "biotype": "disease",
+            "db_id": "D014840",
+            "db": "ncbi_mesh",
+            "name": "Vomiting Anticipatory",
+            "match": "Matched on name <m>Vomiting Anticipatory</m>"
+        },
+        {
+            "_id": "@DISEASE_Familial_cyclic_vomiting_syndrome",
+            "biotype": "disease",
+            "db_id": "C536228",
+            "db": "ncbi_mesh",
+            "name": "Familial cyclic vomiting syndrome",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:HTR2A:None:5": [
+        {
+            "_id": "@GENE_HTR2A",
+            "biotype": "gene",
+            "db_id": "3356",
+            "db": "ncbi_gene",
+            "name": "HTR2A",
+            "description": "All Species",
+            "match": "Matched on name <m>HTR2A</m>"
+        },
+        {
+            "_id": "@VARIANT_c.102T>C_HTR2A_human",
+            "biotype": "variant",
+            "db_id": "rs6313##",
+            "db": "litvar",
+            "name": "p.S34S",
+            "description": "HTR2A (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_c._1438A>G_HTR2A_human",
+            "biotype": "variant",
+            "db_id": "rs6311##",
+            "db": "litvar",
+            "name": "c.102T>C",
+            "description": "HTR2A (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_p.H452Y_HTR2A_human",
+            "biotype": "variant",
+            "db_id": "rs6314##",
+            "db": "litvar",
+            "name": "p.Y452Y",
+            "description": "HTR2A (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@GENE_HTR2AA",
+            "biotype": "gene",
+            "db_id": "102293056",
+            "db": "ncbi_gene",
+            "name": "htr2aa",
+            "description": "All Species",
+            "match": "Matched on name <m>htr2aa</m>"
+        }
+    ],
+    "entity:NFE2L2:None:5": [
+        {
+            "_id": "@GENE_NFE2L2",
+            "biotype": "gene",
+            "db_id": "4780",
+            "db": "ncbi_gene",
+            "name": "NFE2L2",
+            "description": "All Species",
+            "match": "Matched on name <m>NFE2L2</m>"
+        },
+        {
+            "_id": "@GENE_NFE2L2A",
+            "biotype": "gene",
+            "db_id": "101268905",
+            "db": "ncbi_gene",
+            "name": "nfe2l2a",
+            "description": "All Species",
+            "match": "Matched on name <m>nfe2l2a</m>"
+        },
+        {
+            "_id": "@GENE_NFE2L2B",
+            "biotype": "gene",
+            "db_id": "100873093",
+            "db": "ncbi_gene",
+            "name": "nfe2l2b",
+            "description": "All Species",
+            "match": "Matched on name <m>nfe2l2b</m>"
+        },
+        {
+            "_id": "@VARIANT_c._617C>A_NFE2L2_human",
+            "biotype": "variant",
+            "db_id": "rs6721961##",
+            "db": "litvar",
+            "name": "c.617C>A",
+            "description": "NFE2L2 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_c._653A>G_NFE2L2_human",
+            "biotype": "variant",
+            "db_id": "rs35652124##",
+            "db": "litvar",
+            "name": "c.-214A>G",
+            "description": "NFE2L2 (human)",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:TRHR:None:5": [
+        {
+            "_id": "@GENE_TRHR",
+            "biotype": "gene",
+            "db_id": "25570",
+            "db": "ncbi_gene",
+            "name": "Trhr",
+            "description": "All Species",
+            "match": "Matched on name <m>Trhr</m>"
+        },
+        {
+            "_id": "@GENE_TRHR2",
+            "biotype": "gene",
+            "db_id": "170732",
+            "db": "ncbi_gene",
+            "name": "Trhr2",
+            "description": "All Species",
+            "match": "Matched on name <m>Trhr2</m>"
+        },
+        {
+            "_id": "@GENE_TRHR.S",
+            "biotype": "gene",
+            "db_id": "373631",
+            "db": "ncbi_gene",
+            "name": "trhr.S",
+            "description": "All Species",
+            "match": "Matched on name <m>trhr.S</m>"
+        },
+        {
+            "_id": "@GENE_TRHRB",
+            "biotype": "gene",
+            "db_id": "569382",
+            "db": "ncbi_gene",
+            "name": "trhrb",
+            "description": "All Species",
+            "match": "Matched on name <m>trhrb</m>"
+        },
+        {
+            "_id": "@GENE_TRHR2.L",
+            "biotype": "gene",
+            "db_id": "373632",
+            "db": "ncbi_gene",
+            "name": "trhr2.L",
+            "description": "All Species",
+            "match": "Matched on name <m>trhr2.L</m>"
+        }
+    ],
+    "entity:HCAR3:None:5": [
+        {
+            "_id": "@GENE_HCAR3",
+            "biotype": "gene",
+            "db_id": "8843",
+            "db": "ncbi_gene",
+            "name": "HCAR3",
+            "description": "All Species",
+            "match": "Matched on name <m>HCAR3</m>"
+        },
+        {
+            "_id": "@GENE_LOC527744",
+            "biotype": "gene",
+            "db_id": "527744",
+            "db": "ncbi_gene",
+            "name": "LOC527744",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>HCAR3</m>"
+        },
+        {
+            "_id": "@VARIANT_rs2551",
+            "biotype": "variant",
+            "db_id": "rs2551##",
+            "db": "litvar",
+            "name": "rs2551",
+            "description": "HCAR3 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_p.C18N_HCAR3_human",
+            "biotype": "variant",
+            "db_id": "#8843#p.C18N",
+            "db": "litvar",
+            "name": "p.C18N",
+            "description": "HCAR3 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_p.R478L_HCAR3_human",
+            "biotype": "variant",
+            "db_id": "#8843#p.R478L",
+            "db": "litvar",
+            "name": "p.R478L",
+            "description": "HCAR3 (human)",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:HCAR2:None:5": [
+        {
+            "_id": "@GENE_HCAR2",
+            "biotype": "gene",
+            "db_id": "338442",
+            "db": "ncbi_gene",
+            "name": "HCAR2",
+            "description": "All Species",
+            "match": "Matched on name <m>HCAR2</m>"
+        },
+        {
+            "_id": "@GENE_NIACR1",
+            "biotype": "gene",
+            "db_id": "353250",
+            "db": "ncbi_gene",
+            "name": "Niacr1",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>Hcar2</m>"
+        },
+        {
+            "_id": "@GENE_LOC527744",
+            "biotype": "gene",
+            "db_id": "527744",
+            "db": "ncbi_gene",
+            "name": "LOC527744",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>HCAR2</m>"
+        },
+        {
+            "_id": "@GENE_HCR2",
+            "biotype": "gene",
+            "db_id": "369160",
+            "db": "ncbi_gene",
+            "name": "Hcr2",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>Hcar2</m>"
+        },
+        {
+            "_id": "@VARIANT_p.R109A_HCAR2_human",
+            "biotype": "variant",
+            "db_id": "#338442#p.R109A",
+            "db": "litvar",
+            "name": "p.R109A",
+            "description": "HCAR2 (human)",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:Constipation:None:5": [
+        {
+            "_id": "@DISEASE_Constipation",
+            "biotype": "disease",
+            "db_id": "D003248",
+            "db": "ncbi_mesh",
+            "name": "Constipation",
+            "match": "Matched on name <m>Constipation</m>"
+        },
+        {
+            "_id": "@DISEASE_Opioid_Induced_Constipation",
+            "biotype": "disease",
+            "db_id": "D000079689",
+            "db": "ncbi_mesh",
+            "name": "Opioid-Induced Constipation",
+            "match": "Matched on synonyms <m>Constipation, Opioid-Induced</m>"
+        }
+    ],
+    "entity:CAT:None:5": [
+        {
+            "_id": "@GENE_CAT",
+            "biotype": "gene",
+            "db_id": "847",
+            "db": "ncbi_gene",
+            "name": "CAT",
+            "description": "All Species",
+            "match": "Matched on name <m>CAT</m>"
+        },
+        {
+            "_id": "@DISEASE_Cataract",
+            "biotype": "disease",
+            "db_id": "D002386",
+            "db": "ncbi_mesh",
+            "name": "Cataract",
+            "match": "Matched on name <m>Cataract</m>"
+        },
+        {
+            "_id": "@CHEMICAL_Catecholamines",
+            "biotype": "chemical",
+            "db_id": "D002395",
+            "db": "ncbi_mesh",
+            "name": "Catecholamines",
+            "match": "Matched on name <m>Catecholamines</m>"
+        },
+        {
+            "_id": "@CHEMICAL_Steroids",
+            "biotype": "chemical",
+            "db_id": "D013256",
+            "db": "ncbi_mesh",
+            "name": "Steroids",
+            "match": "Matched on synonyms <m>Catatoxic Steroids</m>"
+        },
+        {
+            "_id": "@CHEMICAL_Catechin",
+            "biotype": "chemical",
+            "db_id": "D002392",
+            "db": "ncbi_mesh",
+            "name": "Catechin",
+            "match": "Matched on name <m>Catechin</m>"
+        }
+    ],
+    "entity:Malnutrition:None:5": [
+        {
+            "_id": "@DISEASE_Malnutrition",
+            "biotype": "disease",
+            "db_id": "D044342",
+            "db": "ncbi_mesh",
+            "name": "Malnutrition",
+            "match": "Matched on name <m>Malnutrition</m>"
+        },
+        {
+            "_id": "@DISEASE_Protein_Energy_Malnutrition",
+            "biotype": "disease",
+            "db_id": "D011502",
+            "db": "ncbi_mesh",
+            "name": "Protein-Energy Malnutrition",
+            "match": "Matched on synonyms <m>Malnutritions, Protein-Energy</m>"
+        },
+        {
+            "_id": "@DISEASE_Child_Nutrition_Disorders",
+            "biotype": "disease",
+            "db_id": "D015362",
+            "db": "ncbi_mesh",
+            "name": "Child Nutrition Disorders",
+            "match": "Matched on synonyms <m>Malnutrition, Child</m>"
+        },
+        {
+            "_id": "@DISEASE_Severe_Acute_Malnutrition",
+            "biotype": "disease",
+            "db_id": "D000067011",
+            "db": "ncbi_mesh",
+            "name": "Severe Acute Malnutrition",
+            "match": "Matched on synonyms <m>Malnutrition, Severe Acute</m>"
+        },
+        {
+            "_id": "@DISEASE_Fetal_Nutrition_Disorders",
+            "biotype": "disease",
+            "db_id": "D048070",
+            "db": "ncbi_mesh",
+            "name": "Fetal Nutrition Disorders",
+            "match": "Matched on synonyms <m>Malnutrition, Fetal</m>"
+        }
+    ],
+    "entity:DAO:None:5": [
+        {
+            "_id": "@GENE_DAO",
+            "biotype": "gene",
+            "db_id": "1610",
+            "db": "ncbi_gene",
+            "name": "DAO",
+            "description": "All Species",
+            "match": "Matched on name <m>DAO</m>"
+        },
+        {
+            "_id": "@CHEMICAL_Glyburide",
+            "biotype": "chemical",
+            "db_id": "D005905",
+            "db": "ncbi_mesh",
+            "name": "Glyburide",
+            "match": "Matched on synonyms <m>Daonil</m>"
+        },
+        {
+            "_id": "@GENE_AOC1",
+            "biotype": "gene",
+            "db_id": "26",
+            "db": "ncbi_gene",
+            "name": "AOC1",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>DAO</m>"
+        },
+        {
+            "_id": "@GENE_DAOA",
+            "biotype": "gene",
+            "db_id": "267012",
+            "db": "ncbi_gene",
+            "name": "DAOA",
+            "description": "All Species",
+            "match": "Matched on name <m>DAOA</m>"
+        },
+        {
+            "_id": "@GENE_AOC2",
+            "biotype": "gene",
+            "db_id": "314",
+            "db": "ncbi_gene",
+            "name": "AOC2",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>DAO2</m>"
+        }
+    ],
+    "entity:TYRP1:None:5": [
+        {
+            "_id": "@GENE_TYRP1",
+            "biotype": "gene",
+            "db_id": "7306",
+            "db": "ncbi_gene",
+            "name": "TYRP1",
+            "description": "All Species",
+            "match": "Matched on name <m>TYRP1</m>"
+        },
+        {
+            "_id": "@GENE_TYRP1A",
+            "biotype": "gene",
+            "db_id": "100333145",
+            "db": "ncbi_gene",
+            "name": "tyrp1a",
+            "description": "All Species",
+            "match": "Matched on name <m>tyrp1a</m>"
+        },
+        {
+            "_id": "@GENE_TYRP1B",
+            "biotype": "gene",
+            "db_id": "437022",
+            "db": "ncbi_gene",
+            "name": "tyrp1b",
+            "description": "All Species",
+            "match": "Matched on name <m>tyrp1b</m>"
+        },
+        {
+            "_id": "@GENE_TYRP1.L",
+            "biotype": "gene",
+            "db_id": "380184",
+            "db": "ncbi_gene",
+            "name": "tyrp1.L",
+            "description": "All Species",
+            "match": "Matched on name <m>tyrp1.L</m>"
+        },
+        {
+            "_id": "@VARIANT_rs683",
+            "biotype": "variant",
+            "db_id": "rs683##",
+            "db": "litvar",
+            "name": "rs683",
+            "description": "TYRP1 (human)",
+            "match": "Multiple matches"
+        }
+    ],
+    "entity:XDH:None:5": [
+        {
+            "_id": "@GENE_XDH",
+            "biotype": "gene",
+            "db_id": "708046",
+            "db": "ncbi_gene",
+            "name": "XDH",
+            "description": "All Species",
+            "match": "Matched on name <m>XDH</m>"
+        },
+        {
+            "_id": "@DISEASE_Xanthinuria_Type_I",
+            "biotype": "disease",
+            "db_id": "C562584",
+            "db": "ncbi_mesh",
+            "name": "Xanthinuria Type I",
+            "match": "Matched on synonyms <m>XDH Deficiency</m>"
+        },
+        {
+            "_id": "@GENE_XDH1",
+            "biotype": "gene",
+            "db_id": "829641",
+            "db": "ncbi_gene",
+            "name": "XDH1",
+            "description": "All Species",
+            "match": "Matched on name <m>XDH1</m>"
+        },
+        {
+            "_id": "@GENE_RY",
+            "biotype": "gene",
+            "db_id": "41605",
+            "db": "ncbi_gene",
+            "name": "ry",
+            "description": "All Species",
+            "match": "Matched on synonyms <m>XDH</m>"
+        },
+        {
+            "_id": "@GENE_XDH2",
+            "biotype": "gene",
+            "db_id": "829642",
+            "db": "ncbi_gene",
+            "name": "XDH2",
+            "description": "All Species",
+            "match": "Matched on name <m>XDH2</m>"
+        }
+    ],
+    "entity:SLC47A1:None:5": [
+        {
+            "_id": "@GENE_SLC47A1",
+            "biotype": "gene",
+            "db_id": "67473",
+            "db": "ncbi_gene",
+            "name": "Slc47a1",
+            "description": "All Species",
+            "match": "Matched on name <m>Slc47a1</m>"
+        },
+        {
+            "_id": "@VARIANT_c.922_158G>A_SLC47A1_human",
+            "biotype": "variant",
+            "db_id": "rs2289669##",
+            "db": "litvar",
+            "name": "c.-158G>A",
+            "description": "SLC47A1 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_g._66T>C_SLC47A1_human",
+            "biotype": "variant",
+            "db_id": "rs2252281##",
+            "db": "litvar",
+            "name": "g.-66T>C",
+            "description": "SLC47A1 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@VARIANT_rs8065082",
+            "biotype": "variant",
+            "db_id": "rs8065082##",
+            "db": "litvar",
+            "name": "rs8065082",
+            "description": "SLC47A1 (human)",
+            "match": "Multiple matches"
+        },
+        {
+            "_id": "@GENE_SLC47A1P2",
+            "biotype": "gene",
+            "db_id": "112451549",
+            "db": "ncbi_gene",
+            "name": "SLC47A1P2",
+            "description": "All Species",
+            "match": "Matched on name <m>SLC47A1P2</m>"
+        }
+    ]
+}
