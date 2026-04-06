@@ -30,7 +30,7 @@ warnings.filterwarnings("ignore")
 # PAGE CONFIG
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="BioKnowledge Explorer",
+    page_title="Drug Target Prediction Using Literature",
     page_icon="🧬",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -143,9 +143,9 @@ PUBTATOR_BASE = "https://www.ncbi.nlm.nih.gov/research/pubtator3-api"
 OT_GQL        = "https://api.platform.opentargets.org/api/v4/graphql"
 OLS_URL       = "https://www.ebi.ac.uk/ols/api/search"
 ENSEMBL_URL   = "https://rest.ensembl.org/xrefs/symbol/homo_sapiens"
-PIPELINE_STAGES = ["INPUT","VISUALIZE","PUBTATOR","EVIDENCE",
+PIPELINE_STAGES = ["INPUT","VISUALISE","PUBTATOR","EVIDENCE",
                    "OPEN TARGETS","MERGE","RANK","FILTER",
-                   "KNOWLEDGE GRAPH","FAISS","RAG"]
+                   "FINAL KNOWLEDGE GRAPH","VECTOR DB (FAISS)","RAG BASED LLM"]
 
 # ─────────────────────────────────────────────
 # UTILS
@@ -171,8 +171,8 @@ def safe_get(url, params=None, timeout=12, max_retries=5):
 def render_header():
     st.markdown("""
     <div class="bio-header">
-        <div class="bio-title">🧬 BioKnowledge Explorer</div>
-        <div class="bio-subtitle">Gene–Disease Network · PubTator · Open Targets · RAG</div>
+        <div class="bio-title">🧬 Drug Target Prediction Using Literature</div>
+        <div class="bio-subtitle">Gene–Disease Network Curation · PubTator 3.0 · Open Targets Platform · RAG</div>
     </div>""", unsafe_allow_html=True)
 
 
@@ -434,11 +434,11 @@ def compute_composite_rank(df):
 
         # Mirror network_module.py association categories for weighting
         if cnt > 70 and avg > 15:             # Strong
-            score = avg * 1.5 + cnt * 0.05 + rel * 10 + pmid_bonus * 5
+            score = avg * 1.5 + cnt * 0.05 + rel * 8 + pmid_bonus * 10
         elif cnt > 15 and 10 <= avg <= 15:    # Medium
-            score = avg * 1.0 + cnt * 0.02 + rel * 8  + pmid_bonus * 3
+            score = avg * 1.0 + cnt * 0.02 + rel * 8  + pmid_bonus * 10
         else:                                 # Weak / no relation
-            score = avg * 0.5 + cnt * 0.005 + rel * 3 + pmid_bonus * 1
+            score = avg * 0.5 + cnt * 0.01 + rel * 8 + pmid_bonus * 10
         return round(score, 3)
 
     df["composite_rank"] = df.apply(score_row, axis=1)
@@ -728,10 +728,10 @@ def build_prompt(query, retrieved_docs):
         ---
         """
     return f"""
-    You are a biomedical reasoning assistant.
+    You are a biomedical reasoning assistant, expert in drug target prediction.
 
     Use the context primarily but you may reason moderately.
-    Cite PMIDs when possible.
+    Cite PMIDs when possible. Incase the PMIDs are not present in the context avoid making it up on your own.
 
     Context:
     {context}
@@ -772,7 +772,7 @@ Using BOTH your training knowledge AND the retrieved context above, provide:
 2. Mechanistic Insight
 3. Known Pathway / Biological Process
 4. Strength of Evidence
-5. Confidence (High/Medium/Low)
+5. Confidence (High/Medium/Low) depending on score
 6. Suggested follow-up research directions
 """
     else:
