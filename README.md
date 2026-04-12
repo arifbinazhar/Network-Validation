@@ -1,4 +1,4 @@
-# 🧬 BioKnowledge Explorer
+# BioKnowledge Explorer
 ### RAG-Based Drug Target Validation & Gene-Disease Network Analysis
 
 > **M.Sc. Bioinformatics Research Project — SPPU**
@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 **BioKnowledge Explorer** is an end-to-end, literature-validated drug target discovery and gene-disease network analysis platform. It combines multi-source biomedical evidence — PubMed literature, PubTator annotations, and the Open Targets Platform — with a Retrieval-Augmented Generation (RAG) pipeline to allow researchers to interactively explore, validate, and rank gene-disease associations.
 
@@ -16,11 +16,11 @@ The application is deployed in a **staged, transparent pipeline** format rather 
 
 ---
 
-## 🔬 Scientific Motivation
+## Scientific Motivation
 
 Drug target identification is a critical bottleneck in drug discovery. Existing databases often contain unvalidated or weakly supported associations. This tool addresses that gap by:
 
-- Cross-validating gene-disease associations from primary literature via PubTator
+- Cross-validating gene-disease associations from primary literature via PubTator *(which uses AIONER and BioRex, a fine tuned BioBERT)*
 - Enriching and scoring targets using the Open Targets Platform
 - Applying hybrid composite ranking to prioritize the most evidence-supported targets
 - Enabling natural language querying of the curated knowledge base via RAG
@@ -29,7 +29,7 @@ The project's scale — **626,000+ relations** being curated and validated — d
 
 ---
 
-## 🏗️ Pipeline Architecture
+## Pipeline Architecture
 
 The pipeline is organized into **11 sequential stages**, each transparent and user-controlled:
 
@@ -88,6 +88,8 @@ Targets are categorized using configurable thresholds:
 | **Moderate** | count ≥ 15, score ≥ 0, relation found |
 | **Other** | below moderate thresholds |
 
+*We're looking to build a more robust ranking score calculating model using ML based models.*
+
 ---
 
 ### Stage 8 — Filter Strong / Moderate Associations
@@ -115,7 +117,7 @@ Users can query the curated knowledge base using natural language. The system su
 
 ---
 
-## 🛠️ Dashboard Tools
+## Dashboard Tools
 
 Alongside the staged pipeline, the dashboard provides utility tools:
 - **PMID Lookup (in-pipeline)** — search whether a specific PMID is present in the current pipeline's results
@@ -125,21 +127,21 @@ Alongside the staged pipeline, the dashboard provides utility tools:
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-- ✅ Multi-source validation: PubTator + Open Targets + PubMed
-- ✅ LLM-assisted gene-disease pair generation (Gemini-2.5-Flash)
-- ✅ Hybrid composite ranking with configurable thresholds
-- ✅ Interactive network graph visualization (input and filtered)
-- ✅ RAG-powered biomedical Q&A grounded in curated literature
-- ✅ FAISS vector store for fast semantic retrieval
-- ✅ Large-scale validation: 626,000+ gene-disease/polypharmacology relations
-- ✅ CSV export of all results
-- ✅ Staged, transparent pipeline for reproducibility and interpretability
+- Multi-source validation: PubTator + Open Targets + PubMed
+- LLM-assisted gene-disease pair generation (Gemini-2.5-Flash)
+- Hybrid composite ranking with configurable thresholds
+- Interactive network graph visualization (input and filtered)
+- RAG-powered biomedical Q&A grounded in curated literature and explainantion of the pathways.
+- FAISS vector store for fast semantic retrieval
+- Large-scale validation: 626,000+ gene-disease/polypharmacology relations (***currently under deployment***)
+- CSV export of all results
+- Staged, transparent pipeline for reproducibility and interpretability
 
 ---
 
-## 📦 Repository Structure
+## Repository Structure
 
 ```
 Network-Validation/
@@ -147,10 +149,11 @@ Network-Validation/
 ├── Application/               # Main Streamlit application modules
 ├── Project/                   # Project documentation and notebooks
 │
-├── streamlit_app.py           # Main entry point for the BioKnowledge Explorer UI
+├── app.py           # Main entry point for the BioKnowledge Explorer UI
 ├── PubTator_API.py            # PubTator API integration and validation logic
 ├── open_target_api.py         # Open Targets Platform GraphQL API integration
 ├── Setup.py                   # Environment setup utilities
+├── streamlit_app.py           # Older interface with only network validation without RAG
 │
 ├── requirements.txt           # Python dependencies
 ├── pubtator_cache.json        # Cached PubTator API responses
@@ -167,7 +170,7 @@ Network-Validation/
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - Python 3.9+
@@ -185,7 +188,7 @@ pip install -r requirements.txt
 ### Run the application
 
 ```bash
-streamlit run streamlit_app.py
+streamlit run Project/app.py
 ```
 
 ### Configuration (in the sidebar)
@@ -195,13 +198,13 @@ streamlit run streamlit_app.py
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 The application has been deployed using **Cloudflare** (after migrating from ngrok due to server stability issues). CDAC Ice-Cloud deployment has also been requested for institutional hosting via the CDAC ICE portal.
 
 ---
 
-## 📊 Scale & Data
+## Scale & Data
 
 | Metric | Value |
 |--------|-------|
@@ -213,28 +216,29 @@ The application has been deployed using **Cloudflare** (after migrating from ngr
 
 ---
 
-## 🔭 Roadmap
+## Roadmap
 
-- [ ] Integration of custom trained Relation Extraction (RE) model for additional PMIDs not captured by PubTator
-- [ ] Full automation mode (single-click end-to-end pipeline)
-- [ ] Support for ChatGPT and other LLMs for pair generation
-- [ ] Batch processing for the 626K+ relation validation dataset
-- [ ] Institutional deployment on CDAC Ice-Cloud
-- [ ] Extended disease and drug-target network coverage beyond vitamins/schizophrenia
+- Integration of custom trained Relation Extraction (RE) model for additional PMIDs not captured by PubTator
+- Full automation mode (single-click end-to-end pipeline)
+- Support for ChatGPT and other LLMs for pair generation
+- Batch processing for the 626K+ relation validation dataset
+- Institutional deployment on CDAC Ice-Cloud
+- Extended disease and drug-target network coverage.
 
 ---
 
-## 👥 Team
+## Team
 
 | Name | Role | Contact |
 |------|------|---------|
 | **Arif Bin Azhar** | Developer (M.Sc. Bioinformatics, SPPU) | arifbinazhar03@gmail.com |
-| **Dr. Manali Joshi** | Supervisor | manali.joshi@gmail.com |
-| **Dr. Smita Saxena** | Co-Supervisor | saxenasmita.mca@gmail.com |
+| **Dr. Smita Saxena** | Guide | saxenasmita.mca@gmail.com |
+| **Dr. Manali Joshi** | Co-Guide | manali.joshi@gmail.com |
+
 
 ---
 
-## 📚 Technologies Used
+## Technologies Used
 
 - **Frontend/UI**: Streamlit
 - **LLM**: Google Gemini 2.5 Flash (via Gemini API)
@@ -248,7 +252,7 @@ The application has been deployed using **Cloudflare** (after migrating from ngr
 
 ---
 
-## 📄 License
+## License
 
 This project is part of an academic research initiative at **Savitribai Phule Pune University (SPPU)**. Please contact the authors before using this tool or data for commercial purposes.
 
