@@ -791,65 +791,27 @@ Please provide a comprehensive answer including:
 """
 
 
-# Free-tier model priority order (gemini-1.5-pro is deprecated/404 on free keys)
-# gemini-2.0-flash       -> primary free model (fast, capable)
-# gemini-2.0-flash-lite  -> lighter fallback
-# gemini-1.5-flash       -> older free fallback
-_GEMINI_MODELS = [
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-1.5-flash",
-    "gemini-1.5-flash-latest",
-]
+def ask_gemini_rest(prompt, api_key):
+    try:
+        url  = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={api_key}"
+        body = {"contents": [{"parts": [{"text": prompt}]}]}
+        r    = requests.post(url, json=body, timeout=60)
+        r.raise_for_status()
+        return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+    except Exception as e:
+        return f"Gemini error: {e}"
 
 
-def _call_rest(model_name: str, prompt: str, api_key: str, timeout: int = 60):
-    """Single REST call for one model name. Raises on failure."""
-    url  = (f"https://ai.google.dev/gemini-api/docs/models/"
-            f"{model_name}:generateContent?key={api_key}")
-    body = {"contents": [{"parts": [{"text": prompt}]}]}
-    r    = requests.post(url, json=body, timeout=timeout)
-    r.raise_for_status()
-    candidates = r.json().get("candidates", [])
-    if not candidates:
-        raise ValueError("Empty candidates in response")
-    return candidates[0]["content"]["parts"][0]["text"]
-
-
-def ask_gemini(prompt: str, api_key: str, preferred_model: str = None) -> str:
-    """
-    Try the user-selected model first, then fallback through _GEMINI_MODELS.
-    Uses google-generativeai SDK if installed, otherwise falls back to REST.
-    Returns an error string only when ALL models fail.
-    """
-    # Build ordered list: preferred first, then the rest
-    selected = preferred_model or st.session_state.get("gemini_model_choice", _GEMINI_MODELS[0])
-    ordered = [selected] + [m for m in _GEMINI_MODELS if m != selected]
-    errors = []
-
-    # Try SDK path
+def ask_gemini(prompt, api_key):
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        for model_name in ordered:
-            try:
-                model = genai.GenerativeModel(model_name)
-                resp  = model.generate_content(prompt)
-                return resp.text
-            except Exception as e:
-                errors.append(f"SDK/{model_name}: {e}")
+        model = genai.GenerativeModel("gemini-1.5-pro")
+        return model.generate_content(prompt).text
     except ImportError:
-        errors.append("google-generativeai not installed, using REST")
-
-    # REST fallback
-    for model_name in ordered:
-        try:
-            return _call_rest(model_name, prompt, api_key)
-        except Exception as e:
-            errors.append(f"REST/{model_name}: {e}")
-
-    summary = " | ".join(errors[-4:])
-    return f"\u26a0 All Gemini models failed. Errors: {summary}"
+        return ask_gemini_rest(prompt, api_key)
+    except Exception:
+        return ask_gemini_rest(prompt, api_key)
 
 
 # ─────────────────────────────────────────────
@@ -877,34 +839,8 @@ Include 8-15 pairs. Only valid JSON."""
 # ─────────────────────────────────────────────
 with st.sidebar:
     st.markdown('<div style="font-family:IBM Plex Mono;color:#00d4ff;font-size:.9rem;letter-spacing:.1em;margin-bottom:1rem">⚙ CONFIGURATION</div>', unsafe_allow_html=True)
-
-    # LLM config
     st.markdown("**LLM**")
     gemini_key = st.text_input("Gemini API Key", type="password", key="gem_key")
-
-    gemini_model_choice = st.selectbox(
-        "Gemini model",
-        options=_GEMINI_MODELS,
-        index=0,
-        key="gemini_model_choice",
-        help=(
-            "gemini-2.0-flash  — recommended free-tier model\n"
-            "gemini-2.0-flash-lite — lighter/faster\n"
-            "gemini-1.5-flash  — older free fallback"
-        ),
-    )
-
-    if st.button("Test API Key", key="test_gem"):
-        if not gemini_key:
-            st.warning("Enter API key first.")
-        else:
-            with st.spinner("Testing connection…"):
-                _test = ask_gemini("Reply with exactly: OK", gemini_key)
-            if _test.startswith("⚠"):
-                st.error(_test)
-            else:
-                st.success(f"✅ Connected — model replied: {_test.strip()[:80]}")
-
     st.markdown("**PubMed**")
     ncbi_email = st.text_input("NCBI Email", value="user@example.com", key="ncbi_mail")
     st.markdown("**Processing**")
@@ -916,16 +852,12 @@ with st.sidebar:
                "OPEN TARGETS","MERGED","RANKED","FILTERED",
                "KNOWLEDGE GRAPH","FAISS","RAG READY"]
     for _k, _lbl in zip(STAGE_KEYS, _labels):
-        _ok  = st.session_state[_k]
+        _ok = st.session_state[_k]
         _col = "#10b981" if _ok else "#1e3a5f"
-        _dot = "●" if _ok else "○"
-        st.markdown(
-            f'<div style="font-family:IBM Plex Mono;font-size:.7rem;color:{_col};padding:1px 0">{_dot} {_lbl}</div>',
-            unsafe_allow_html=True
-        )
+        st.markdown(f'<div style="font-family:IBM Plex Mono;font-size:.7rem;color:{_col};padding:1px 0">{"●" if _ok else "○"} {_lbl}</div>', unsafe_allow_html=True)
 
     st.divider()
-    if st.button("Reset Pipeline"):
+    if st.button("🔄 Reset Pipeline"):
         for _k in STAGE_KEYS:
             st.session_state[_k] = False
         for _k in ["input_df","validated_df","enriched_df","filtered_df",
