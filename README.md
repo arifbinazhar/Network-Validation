@@ -14,6 +14,11 @@ The system is currently being used to **clean, curate, and validate over 626,000
 
 The application is deployed in a **staged, transparent pipeline** format rather than as a black box, allowing users to understand and interact with each step of the analysis before proceeding to the next.
 
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_1.png?raw=true) 
+
+***The interface of BioKnowledge Explorer***
+
+
 ---
 
 ## Scientific Motivation
@@ -45,6 +50,8 @@ Users can provide gene-disease entity pairs in two ways:
 ### Stage 2 — Initial Network Visualization
 The raw, unvalidated gene-disease network is visualized as an interactive graph. This provides a baseline view of the input network before any filtering or validation is applied.
 
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/uncleaned_network.png?raw=true) 
+
 ---
 
 ### Stage 3 — PubTator Validation
@@ -54,10 +61,18 @@ Each gene-disease pair is submitted to the **NCBI PubTator API**, which returns 
 - Relations not found (potential false positives)
 - Associated PubMed IDs (PMIDs) per pair
 
+  ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_4.png?raw=true) 
+
+
+
 ---
 
 ### Stage 4 — PMID Evidence Extraction
 All unique PMIDs retrieved during PubTator validation are aggregated and deduplicated. This stage reports the number of unique PMIDs and the per-pair PMID distribution, providing a quantitative measure of literature support for each gene-disease association.
+
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_PubTator.png?raw=true) 
+
+
 
 ---
 
@@ -68,10 +83,14 @@ Each validated gene-disease pair is enriched using the **Open Targets Platform G
 - Average Open Targets association score (`ot_avg_score`)
 - Evidence sources (e.g., `europepmc`, `clinical_precedence`, `gwas_credible_sets`)
 
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_6.png?raw=true)
+  
+
 ---
 
 ### Stage 6 — Data Integration
 All upstream data — PubTator results, PMID lists, and Open Targets scores — are merged into a unified, integrated dataframe. This consolidated view is the input to the ranking engine.
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_Data_integration.png?raw=true)
 
 ---
 
@@ -90,21 +109,28 @@ Targets are categorized using configurable thresholds:
 
 *We're looking to build a more robust ranking score calculating model using ML based models.*
 
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_Data_integration.png?raw=true)
+
 ---
 
 ### Stage 8 — Filter Strong / Moderate Associations
 The final curated network retains only **Strong** and **Moderate** associations, removing poorly supported gene-disease pairs. Each retained pair is tagged with its association strength, providing an interpretable output for downstream analysis.
+
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_filtering.png?raw=true)
 
 ---
 
 ### Stage 9 — Interactive Filtered Knowledge Graph
 The validated, filtered network is rendered as an **interactive knowledge graph** with color-coded nodes by association strength. Users can drag nodes, hover for details, and visually explore the curated network structure.
 
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Final_cleaned_network.png?raw=true)
+
 ---
 
 ### Stage 10 — FAISS Vector Index Construction
 PubMed abstracts corresponding to the validated PMIDs are fetched and chunked. These chunks are embedded and stored in a **FAISS vector index**, forming the retrieval backbone of the RAG system.
 
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Unique_PMID_FAISS.png?raw=true)
 ---
 
 ### Stage 11 — Biomedical Query Interface (RAG)
@@ -114,6 +140,8 @@ Users can query the curated knowledge base using natural language. The system su
 
 > *Example query: "Explain the role of COMT in schizophrenia"*
 > The system returns a structured evidence summary with supporting PMIDs, mechanistic insights, strength of association, and confidence assessment.
+
+![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Rag_response.png?raw=true)
 
 ---
 
