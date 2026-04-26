@@ -8,11 +8,13 @@
 
 ## Overview
 
-**BioKnowledge Explorer** is an end-to-end, literature-validated drug target discovery and gene-disease network analysis platform. It combines multi-source biomedical evidence — PubMed literature, PubTator annotations, and the Open Targets Platform — with a Retrieval-Augmented Generation (RAG) pipeline to allow researchers to interactively explore, validate, and rank gene-disease associations.
+**BioKnowledge Explorer** is an end-to-end, literature-validated drug target discovery and gene-disease network analysis platform. It combines multi-source biomedical evidence from PubMed literature, PubTator annotations, and the Open Targets Platform with a Retrieval-Augmented Generation (RAG) pipeline to allow researchers to interactively explore, validate, and rank gene-disease associations.
 
 The system is currently being used to **clean, curate, and validate over 626,000 gene-disease/polypharmacology relations** through literature-based evidence, establishing it as a large-scale bioinformatics validation framework.
 
 The application is deployed in a **staged, transparent pipeline** format rather than as a black box, allowing users to understand and interact with each step of the analysis before proceeding to the next.
+
+This application is currently under transition stage as we are currently exploring different type of RAG techniques.
 
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_1.png?raw=true) 
 
@@ -284,6 +286,7 @@ The application has been deployed using **Cloudflare** (after migrating from ngr
 
 This project is part of an academic research initiative at **Savitribai Phule Pune University (SPPU)**. Please contact the authors before using this tool or data for commercial purposes.
 
+> *"Some texts in this readme file as well codes we're generated using LLMs. It might be possible that it might have missed my intial review"*
 ---
 
 > *"Validating the biology, one relation at a time — at 626,000+ scale."*
