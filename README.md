@@ -262,8 +262,8 @@ The application has been deployed using **Cloudflare** (after migrating from ngr
 | Name | Role | Contact |
 |------|------|---------|
 | **Arif Bin Azhar** | Developer (M.Sc. Bioinformatics, SPPU) | arifbinazhar03@gmail.com |
-| **Dr. Smita Saxena** | Guide | saxenasmita.mca@gmail.com |
-| **Dr. Manali Joshi** | Co-Guide | manali.joshi@gmail.com |
+| **Dr. Smita Saxena** | Guide (Assistant Professor, Bioinformatics Centre, SPPU) | saxenasmita.mca@gmail.com |
+| **Dr. Manali Joshi** | Co-Guide(Associate Professor, Bioinformatics Centre, SPPU) | manali.joshi@gmail.com |
 
 
 ---
