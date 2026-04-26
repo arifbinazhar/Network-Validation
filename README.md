@@ -14,7 +14,7 @@ The system is currently being used to **clean, curate, and validate over 626,000
 
 The application is deployed in a **staged, transparent pipeline** format rather than as a black box, allowing users to understand and interact with each step of the analysis before proceeding to the next.
 
-This application is currently under transition stage as we are currently exploring different type of RAG techniques.
+*This application is currently under transition stage as we are currently exploring different type of RAG techniques.*
 
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_1.png?raw=true) 
 
@@ -32,7 +32,7 @@ Drug target identification is a critical bottleneck in drug discovery. Existing 
 - Applying hybrid composite ranking to prioritize the most evidence-supported targets
 - Enabling natural language querying of the curated knowledge base via RAG
 
-The project's scale — **626,000+ relations** being curated and validated — demonstrates its utility beyond a single-disease use case, with an initial focus on polypharmacology networks of vitamins and neuropsychiatric conditions such as schizophrenia.
+The project's scale is **626,000+ relations** being curated and validated, this demonstrates its utility beyond a single-disease use case, with an initial focus on polypharmacology networks of vitamins and neuropsychiatric conditions such as schizophrenia.
 
 ---
 
@@ -40,7 +40,7 @@ The project's scale — **626,000+ relations** being curated and validated — d
 
 The pipeline is organized into **11 sequential stages**, each transparent and user-controlled:
 
-### Stage 1 — Data Ingestion & Input
+### Stage 1: Data Ingestion & Input
 Users can provide gene-disease entity pairs in two ways:
 - **Upload a CSV** file with pre-defined gene-disease pairs
 - **Natural Language Query** via an integrated LLM (currently Gemini-2.5-Flash) to generate candidate gene-disease pairs automatically
@@ -49,14 +49,14 @@ Users can provide gene-disease entity pairs in two ways:
 
 ---
 
-### Stage 2 — Initial Network Visualization
+### Stage 2: Initial Network Visualization
 The raw, unvalidated gene-disease network is visualized as an interactive graph. This provides a baseline view of the input network before any filtering or validation is applied.
 
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/uncleaned_network.png?raw=true) 
 
 ---
 
-### Stage 3 — PubTator Validation
+### Stage 3: PubTator Validation
 Each gene-disease pair is submitted to the **NCBI PubTator API**, which returns co-mention evidence from PubMed literature. The stage reports:
 - Total pairs submitted
 - Relations found in literature
@@ -69,7 +69,7 @@ Each gene-disease pair is submitted to the **NCBI PubTator API**, which returns 
 
 ---
 
-### Stage 4 — PMID Evidence Extraction
+### Stage 4: PMID Evidence Extraction
 All unique PMIDs retrieved during PubTator validation are aggregated and deduplicated. This stage reports the number of unique PMIDs and the per-pair PMID distribution, providing a quantitative measure of literature support for each gene-disease association.
 
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_PubTator.png?raw=true) 
@@ -78,7 +78,7 @@ All unique PMIDs retrieved during PubTator validation are aggregated and dedupli
 
 ---
 
-### Stage 5 — Open Targets Enrichment
+### Stage 5: Open Targets Enrichment
 Each validated gene-disease pair is enriched using the **Open Targets Platform GraphQL API**. Enrichment data includes:
 - Ensembl gene IDs and MONDO disease IDs
 - Open Targets evidence count (`ot_evidence_count`)
@@ -90,13 +90,13 @@ Each validated gene-disease pair is enriched using the **Open Targets Platform G
 
 ---
 
-### Stage 6 — Data Integration
+### Stage 6: Data Integration
 All upstream data — PubTator results, PMID lists, and Open Targets scores — are merged into a unified, integrated dataframe. This consolidated view is the input to the ranking engine.
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_Data_integration.png?raw=true)
 
 ---
 
-### Stage 7 — Hybrid Composite Ranking
+### Stage 7: Hybrid Composite Ranking
 A composite ranking score is calculated by combining:
 - **Open Targets evidence count** and **average score**
 - **PubTator-derived PMID count** per pair
@@ -115,27 +115,27 @@ Targets are categorized using configurable thresholds:
 
 ---
 
-### Stage 8 — Filter Strong / Moderate Associations
+### Stage 8: Filter Strong / Moderate Associations
 The final curated network retains only **Strong** and **Moderate** associations, removing poorly supported gene-disease pairs. Each retained pair is tagged with its association strength, providing an interpretable output for downstream analysis.
 
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Image_filtering.png?raw=true)
 
 ---
 
-### Stage 9 — Interactive Filtered Knowledge Graph
+### Stage 9: Interactive Filtered Knowledge Graph
 The validated, filtered network is rendered as an **interactive knowledge graph** with color-coded nodes by association strength. Users can drag nodes, hover for details, and visually explore the curated network structure.
 
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Final_cleaned_network.png?raw=true)
 
 ---
 
-### Stage 10 — FAISS Vector Index Construction
+### Stage 10: FAISS Vector Index Construction
 PubMed abstracts corresponding to the validated PMIDs are fetched and chunked. These chunks are embedded and stored in a **FAISS vector index**, forming the retrieval backbone of the RAG system.
 
 ![alt text](https://github.com/arifbinazhar/Network-Validation/blob/main/Application_images/Unique_PMID_FAISS.png?raw=true)
 ---
 
-### Stage 11 — Biomedical Query Interface (RAG)
+### Stage 11: Biomedical Query Interface (RAG)
 Users can query the curated knowledge base using natural language. The system supports:
 - **RAG mode** — retrieves relevant FAISS chunks from curated abstracts and generates evidence-grounded answers
 - **LLM Search mode** — falls back to the base LLM if RAG context is insufficient
