@@ -1,2 +1,7 @@
-# External Libraries
-pip install requests pandas streamlit altair pyvis pyngrok
+requests
+pandas
+streamlit
+altair
+pyvis
+pyngrok
+faiss-cpu
