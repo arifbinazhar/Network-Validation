@@ -30,7 +30,7 @@ warnings.filterwarnings("ignore")
 # PAGE CONFIG
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="Drug Target Prediction Using Literature",
+    page_title="Drug Target Validation Using Literature",
     page_icon="🧬",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -171,7 +171,7 @@ def safe_get(url, params=None, timeout=12, max_retries=5):
 def render_header():
     st.markdown("""
     <div class="bio-header">
-        <div class="bio-title">🧬 Drug Target Prediction Using Literature</div>
+        <div class="bio-title">🧬 Drug Target Validation Using Literature</div>
         <div class="bio-subtitle">Gene–Disease Network Curation · PubTator 3.0 · Open Targets Platform · RAG</div>
     </div>""", unsafe_allow_html=True)
 
